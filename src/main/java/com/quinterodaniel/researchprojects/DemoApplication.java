@@ -6,7 +6,7 @@ import org.springframework.boot.web.servlet.support.SpringBootServletInitializer
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
-@SpringBootApplication(scanBasePackages = "com.javachinna")
+@SpringBootApplication(scanBasePackages = "com.quinterodaniel.researchprojects")
 @EnableJpaRepositories
 @EnableTransactionManagement
 public class DemoApplication extends SpringBootServletInitializer {

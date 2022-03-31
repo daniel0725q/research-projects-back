@@ -2,19 +2,19 @@
   "groups": [
     {
       "name": "app",
-      "type": "com.javachinna.config.AppProperties",
-      "sourceType": "com.javachinna.config.AppProperties"
+      "type": "com.quinterodaniel.researchprojects.config.AppProperties",
+      "sourceType": "com.quinterodaniel.researchprojects.config.AppProperties"
     },
     {
       "name": "app.auth",
-      "type": "com.javachinna.config.AppProperties$Auth",
-      "sourceType": "com.javachinna.config.AppProperties",
+      "type": "com.quinterodaniel.researchprojects.config.AppProperties$Auth",
+      "sourceType": "com.quinterodaniel.researchprojects.config.AppProperties",
       "sourceMethod": "getAuth()"
     },
     {
       "name": "app.oauth2",
-      "type": "com.javachinna.config.AppProperties$OAuth2",
-      "sourceType": "com.javachinna.config.AppProperties",
+      "type": "com.quinterodaniel.researchprojects.config.AppProperties$OAuth2",
+      "sourceType": "com.quinterodaniel.researchprojects.config.AppProperties",
       "sourceMethod": "getOauth2()"
     }
   ],
@@ -22,17 +22,17 @@
     {
       "name": "app.auth.token-expiration-msec",
       "type": "java.lang.Long",
-      "sourceType": "com.javachinna.config.AppProperties$Auth"
+      "sourceType": "com.quinterodaniel.researchprojects.config.AppProperties$Auth"
     },
     {
       "name": "app.auth.token-secret",
       "type": "java.lang.String",
-      "sourceType": "com.javachinna.config.AppProperties$Auth"
+      "sourceType": "com.quinterodaniel.researchprojects.config.AppProperties$Auth"
     },
     {
       "name": "app.oauth2.authorized-redirect-uris",
       "type": "java.util.List<java.lang.String>",
-      "sourceType": "com.javachinna.config.AppProperties$OAuth2"
+      "sourceType": "com.quinterodaniel.researchprojects.config.AppProperties$OAuth2"
     }
   ],
   "hints": []
