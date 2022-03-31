@@ -24,6 +24,6 @@ public class Advance implements Serializable {
     private String description;
 
     @JsonIgnore
-    @OneToMany(mappedBy="advance")
+    @ManyToMany(mappedBy="advance")
     private Set<KPI> kpis;
 }

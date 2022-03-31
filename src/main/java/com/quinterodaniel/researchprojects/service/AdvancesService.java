@@ -37,12 +37,8 @@ public class AdvancesService {
         return advances;
     }
 
-    public void deleteAdvance(Advance advance) {
-        advanceRepository.delete(advance);
-    }
-
-    public void deleteAdvances(List<Advance> advances) {
-        advanceRepository.deleteAll(advances);
+    public void deleteAdvance(Long id) {
+        advanceRepository.deleteAdvanceById(id);
     }
 
     public void createAdvance(AdvanceDTO advanceDTO) {
@@ -52,5 +48,9 @@ public class AdvancesService {
 
     public void updateAdvance(Advance advance) {
         advanceRepository.save(advance);
+    }
+
+    public Optional<Advance> getAdvanceById(Long id) {
+        return advanceRepository.findById(id);
     }
 }

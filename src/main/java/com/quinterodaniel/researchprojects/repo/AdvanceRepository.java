@@ -10,4 +10,7 @@ import java.util.List;
 @Repository
 public interface AdvanceRepository extends CrudRepository<Advance, Long> {
     List<Advance> findAdvanceByKpis(KPI kpi);
+
+    void deleteAdvanceById(Long id);
+
 }

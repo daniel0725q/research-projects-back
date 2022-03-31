@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
 
 @Entity
 @NoArgsConstructor
@@ -33,7 +34,7 @@ public class KPI implements Serializable {
     private Project project;
 
     @JsonIgnore
-    @ManyToOne
+    @ManyToMany
     @JoinColumn(name="ADVANCE_ID", nullable=false)
-    private Advance advance;
+    private List<Advance> advance;
 }

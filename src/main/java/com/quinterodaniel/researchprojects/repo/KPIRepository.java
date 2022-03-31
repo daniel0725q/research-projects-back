@@ -10,4 +10,6 @@ import java.util.List;
 @Repository
 public interface KPIRepository extends CrudRepository<KPI, Long> {
     List<KPI> findByProject(Project project);
+
+    List<KPI> findByProjectId(Long id);
 }
