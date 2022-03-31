@@ -34,7 +34,7 @@ public class ProjectsController {
     }
 
     @GetMapping("/projects")
-    public ResponseEntity getAllProjects(@RequestBody ProjectDTO projectDTO) {
+    public ResponseEntity getAllProjects() {
         return ResponseEntity.ok(projectsService.getProjects());
     }
 
