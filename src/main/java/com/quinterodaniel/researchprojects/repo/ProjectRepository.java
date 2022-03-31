@@ -12,4 +12,6 @@ import java.util.Set;
 public interface ProjectRepository extends CrudRepository<Project, Long> {
     List<Project> getProjectsByUsersIn(Set<AppUser> users);
 
+    List<Project> findAll();
+
 }

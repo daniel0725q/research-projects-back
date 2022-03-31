@@ -6,6 +6,7 @@ import com.quinterodaniel.researchprojects.service.ProjectsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Optional;
@@ -27,12 +28,18 @@ public class ProjectsController {
     }
 
     @PostMapping("/projects")
-    public ResponseEntity createAdvance(@RequestBody ProjectDTO projectDTO) {
+    public ResponseEntity createProjects(@RequestBody ProjectDTO projectDTO) {
         projectsService.createProject(projectDTO);
         return new ResponseEntity(HttpStatus.OK);
     }
 
+    @GetMapping("/projects")
+    public ResponseEntity getAllProjects(@RequestBody ProjectDTO projectDTO) {
+        return ResponseEntity.ok(projectsService.getProjects());
+    }
+
     @PutMapping("/projects/{id}")
+    @PreAuthorize("hasAnyRole(ROLE_STUDENT)")
     public ResponseEntity updateProject(@RequestBody ProjectDTO projectDTO, @PathVariable String id) {
         AtomicReference<ResponseEntity> response = null;
         Optional<Project> projectOptional = projectsService.getProjectById(Long.parseLong(id));

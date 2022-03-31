@@ -15,7 +15,7 @@ import com.quinterodaniel.researchprojects.config.CurrentUser;
 public class UserController {
 
 	@GetMapping("/user/me")
-	@PreAuthorize("hasRole('USER')")
+	@PreAuthorize("hasRole('ROLE_STUDENT')")
 	public ResponseEntity<?> getCurrentUser(@CurrentUser LocalUser user) {
 		return ResponseEntity.ok(GeneralUtils.buildUserInfo(user));
 	}
@@ -26,19 +26,19 @@ public class UserController {
 	}
 
 	@GetMapping("/user")
-	@PreAuthorize("hasRole('USER')")
+	@PreAuthorize("hasRole('ROLE_STUDENT')")
 	public ResponseEntity<?> getUserContent() {
 		return ResponseEntity.ok("User content goes here");
 	}
 
 	@GetMapping("/admin")
-	@PreAuthorize("hasRole('ADMIN')")
+	@PreAuthorize("hasRole('ROLE_STUDENT')")
 	public ResponseEntity<?> getAdminContent() {
 		return ResponseEntity.ok("Admin content goes here");
 	}
 
 	@GetMapping("/mod")
-	@PreAuthorize("hasRole('MODERATOR')")
+	@PreAuthorize("hasRole('ROLE_STUDENT')")
 	public ResponseEntity<?> getModeratorContent() {
 		return ResponseEntity.ok("Moderator content goes here");
 	}

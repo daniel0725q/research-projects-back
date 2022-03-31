@@ -40,4 +40,8 @@ public class ProjectsService {
         users.add(user);
         return projectRepository.getProjectsByUsersIn(users);
     }
+
+    public List<Project> getProjects() {
+        return projectRepository.findAll();
+    }
 }
